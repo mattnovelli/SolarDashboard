@@ -1,15 +1,16 @@
-'use strict';
+/* indent: 2 */
+var WeatherViewModel = (function () {
+  'use strict';
 
-var WeatherViewModel = (function() {
-  var Constructor = function() {
+  var Constructor = function () {
 
-    var _this = this;
+    var self = this;
 
-    _this.temp = ko.observable('N/A');
-    _this.forcast = ko.observable('N/A');
-    _this.unavailable = ko.computed(function() { return _this.temp() === 'N/A' || _this.forcast() === 'N/A'; });
+    self.temp = ko.observable('N/A');
+    self.forcast = ko.observable('N/A');
+    self.unavailable = ko.computed(function () { return self.temp() === 'N/A' || self.forcast() === 'N/A'; });
 
-    _this.fetch = function() {
+    self.fetch = function () {
       $.ajax({
         url: 'http://dev.mtdweb.cumtd.com/api/weather/current',
         dataType: 'JSON',
@@ -17,23 +18,23 @@ var WeatherViewModel = (function() {
         xhrFields: {
           withCredentials: false
         }
-      }).then(function(data) {
-        _this.temp(data.Temperature);
-        _this.forcast(data.Conditions);
+      }).then(function (data) {
+        self.temp(data.Temperature);
+        self.forcast(data.Conditions);
 
-        if (_this.unavailable()) {
-          window.setTimeout(_this.fetch, 15000);
+        if (self.unavailable()) {
+          window.setTimeout(self.fetch, 15000);
         }
 
-      }, function() {
-        _this.temp('N/A');
-        _this.forcast = 'N/A';
+      }, function () {
+        self.temp('N/A');
+        self.forcast = 'N/A';
       });
     };
 
-    window.setInterval(_this.fetch(), 600000); // ten minutes
-    _this.fetch();
+    window.setInterval(self.fetch(), 600000); // ten minutes
+    self.fetch();
 
   };
   return Constructor;
-})();
+}());
