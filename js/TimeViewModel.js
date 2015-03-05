@@ -1,7 +1,7 @@
 /* indent: 2 */
 var TimeViewModel = (function () {
   'use strict';
-  return function Constructor () {
+  return function Constructor() {
     var self = this;
     self.time = ko.observable(moment());
     self.formattedTime = ko.computed(function () { return self.time().format("h:mm:ss a"); });
@@ -19,7 +19,7 @@ var TimeViewModel = (function () {
       });
     };
 
-    window.setInterval(function() {
+    window.setInterval(function () {
       self.time(self.time().add(1, 'seconds'));
     }, 1000);
 

@@ -1,7 +1,7 @@
 /* indent: 2 */
 var WeatherViewModel = (function () {
   'use strict';
-  return function Constructor () {
+  return function Constructor() {
 
     var self = this;
 
