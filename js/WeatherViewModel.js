@@ -20,7 +20,6 @@ var WeatherViewModel = (function () {
       }).then(function (data) {
         self.temp(data.Temperature);
         self.forcast(data.Conditions);
-
         if (self.unavailable()) {
           window.setTimeout(self.fetch, 15000);
         }
@@ -31,7 +30,7 @@ var WeatherViewModel = (function () {
       });
     };
 
-    window.setInterval(self.fetch(), 1200000); // 20 minutes
+    window.setInterval(self.fetch, 1200000); // 20 minutes
     self.fetch();
 
   };
