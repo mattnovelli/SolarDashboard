@@ -1,0 +1,59 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+}
+
+html {
+  font-size:10px;
+}
+body {
+  font-size:160%;
+  width:192rem;
+  height:108rem;
+  overflow:hidden;
+  background:rgba(52, 152, 219, 0.1);
+}
+
+iframe, .weather {
+  margin:4rem 0 0 4rem;
+}
+
+iframe {
+  width:90rem;
+  height:63.7rem;
+  float:left;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
+  -moz-filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
+  filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
+}
+
+.weather {
+  width:184rem;
+  height:32.3rem;
+  background:#fff;
+  float:left;
+  clear:left;
+  border-radius:0.5rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height:32.3rem;
+  font-size:16rem;
+  color:#333;
+  text-align:center;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
+  -moz-filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
+  filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
+}
+
+.temp {
+  font-weight:800;
+}
+
+.forcast {
+  font-weight:300;
+}
