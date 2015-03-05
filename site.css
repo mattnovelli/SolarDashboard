@@ -22,24 +22,31 @@ body {
 }
 
 iframe, .bottom {
-  margin:4rem 0 0 4rem;
-}
-
-iframe {
-  width:74rem;
-  height:51.5rem;
+  margin:6rem 0 0 4rem;
   float:left;
   -webkit-filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
   -moz-filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
   filter: drop-shadow(2px 2px 4px rgba(51, 51, 51, 0.4));
 }
 
+.top-frame {
+  float:left;
+}
+
+.bottom-frame, .bottom {
+  margin-top:6rem;
+}
+
+.bottom-frame {
+  height:46.5rem;
+  clear:left;
+}
+
 .bottom {
-  width:152rem;
-  height:56.5rem;
+  width:74rem;
+  height:42.8rem;
   background:#fff;
   float:left;
-  clear:left;
   border-radius:0.5rem;
   font-family: 'Open Sans', sans-serif;
   color:#333;
@@ -51,26 +58,21 @@ iframe {
 
 p {
   margin:0;
+  text-align:center;
+  line-height:1;
+}
+
+.forcast, .deg, .temp {
+  font-weight:800;
+  font-size:13rem;
 }
 
 .weather {
-  height:30.5rem;
-  line-height:22rem;
-  font-size:22rem;
-}
-
-.temp {
-  font-weight:800;
-}
-
-.forcast, .deg {
-  font-weight:800;
+  margin-top:2rem;
 }
 
 .time {
-  margin-top:9rem;
-  line-height:16rem;
-  height:17rem;
-  font-size:16rem;
   font-weight:300;
+  margin-top:10rem;
+  font-size:9rem;
 }
