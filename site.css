@@ -73,12 +73,16 @@ p {
   font-weight:800;
 }
 
+ .weather > span {
+   display: block;
+ }
+
 .temp {
-  display:block;
   font-size:12rem;
 }
 
 .forcast {
   font-size:6rem;
   font-weight:300;
+  margin-top:1.2rem;
 }
