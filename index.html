@@ -12,28 +12,45 @@
 
       <iframe
         src="https://www.buildingos.com/blocks/70e54cd3d0814fbd828bcb2a8e94fc3f/"
+        class="top-frame"
         allowtransparency="true"
         scrolling ="no"
         frameBorder="0"
-        width="900" height="637">
+        width="740" height="555">
       </iframe>
 
       <iframe
         src="https://www.buildingos.com/blocks/f8e741dd0d9a474aabf44104a7c4adfd/"
+        class="top-frame"
         allowtransparency="true"
         scrolling ="no"
         frameBorder="0"
-        width="900" height="637">
+        width="740" height="555">
       </iframe>
 
-      <div class="weather">
-        <span class="temp"><span data-bind="text: temp">N/A</span><span class="deg" data-bind="ifnot: unavailable">°</span></span>: <span class="forcast" data-bind="text: forcast">N/A</span>
+      <iframe
+        src="https://www.buildingos.com/blocks/1751386f46554583b7babc5ec822126f/"
+        class="bottom-frame"
+        allowtransparency="true"
+        scrolling ="no"
+        frameBorder="0"
+        width="740" height="465">
+      </iframe>
+
+      <div class="bottom">
+        <p class="time" id="time" data-bind="text: formattedTime"><p>
+        <p class="weather" id="weather">
+          <span class="temp"><span data-bind="text: temp">N/A</span><span class="deg" data-bind="ifnot: unavailable">°</span></span>: <span class="forcast" data-bind="text: forcast">N/A</span>
+        </p>
       </div>
       <script src="js/jquery-1.11.2.js"></script>
       <script src="js/knockout-3.3.0.js"></script>
-      <script src="js/weather.js"></script>
+      <script src="js/moment.js"></script>
+      <script src="js/WeatherViewModel.js"></script>
+      <script src="js/TimeViewModel.js"></script>
       <script>
-        ko.applyBindings(new WeatherViewModel());
+        ko.applyBindings(new WeatherViewModel(), document.getElementById('weather'));
+        ko.applyBindings(new TimeViewModel(), document.getElementById('time'));
       </script>
     </body>
 </html>

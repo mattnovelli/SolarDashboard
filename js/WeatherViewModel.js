@@ -1,8 +1,7 @@
 /* indent: 2 */
 var WeatherViewModel = (function () {
   'use strict';
-
-  var Constructor = function () {
+  return function Constructor () {
 
     var self = this;
 
@@ -36,5 +35,4 @@ var WeatherViewModel = (function () {
     self.fetch();
 
   };
-  return Constructor;
 }());
