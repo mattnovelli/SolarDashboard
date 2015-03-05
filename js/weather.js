@@ -32,7 +32,7 @@ var WeatherViewModel = (function () {
       });
     };
 
-    window.setInterval(self.fetch(), 600000); // ten minutes
+    window.setInterval(self.fetch(), 1200000); // 20 minutes
     self.fetch();
 
   };
