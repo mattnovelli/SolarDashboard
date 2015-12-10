@@ -11,7 +11,7 @@ var WeatherViewModel = (function () {
 
     self.fetch = function () {
       $.ajax({
-        url: 'http://dev.mtdweb.cumtd.com/api/weather/current',
+        url: 'https://mtdweb.cumtd.com/api/weather/current',
         dataType: 'JSON',
         contentType: 'text/plain',
         xhrFields: {
