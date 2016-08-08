@@ -23,7 +23,6 @@ var WeatherViewModel = (function () {
         if (self.unavailable()) {
           window.setTimeout(self.fetch, 15000);
         }
-
       }, function () {
         self.temp('N/A');
         self.forcast = 'N/A';
@@ -34,4 +33,4 @@ var WeatherViewModel = (function () {
     self.fetch();
 
   };
-}());
+} ());

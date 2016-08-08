@@ -8,7 +8,7 @@ var TimeViewModel = (function () {
 
     self.fetch = function () {
       $.ajax({
-        url: 'http://dev.mtdweb.cumtd.com/api/time',
+        url: 'https://mtdweb.cumtd.com/api/time',
         dataType: 'JSON',
         contentType: 'text/plain',
         xhrFields: {
