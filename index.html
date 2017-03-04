@@ -1,61 +1,46 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Solar Dashboard</title>
-        <meta name="description" content="MTD Maintenance facility solar dashboard.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="site.css">
-    </head>
-    <body>
+<html lang="en">
 
-      <iframe
-        src="https://www.buildingos.com/blocks/0f18e03e9b66492eb364c6dfda28a6ba/"
-        class="top-frame"
-        allowtransparency="true"
-        scrolling ="no"
-        frameBorder="0"
-        width="740" height="570">
-      </iframe>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Solar Dashboard</title>
+    <meta name="description" content="MTD Maintenance facility solar dashboard.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="site.css">
+</head>
 
-      <iframe
-        src="https://www.buildingos.com/blocks/f8e741dd0d9a474aabf44104a7c4adfd/"
-        class="top-frame"
-        allowtransparency="true"
-        scrolling ="no"
-        frameBorder="0"
-        width="740" height="570">
-      </iframe>
+<body>
 
-      <iframe
-        src="https://www.buildingos.com/blocks/1751386f46554583b7babc5ec822126f/"
-        class="bottom-frame"
-        allowtransparency="true"
-        scrolling ="no"
-        frameBorder="0"
-        width="740" height="465">
-      </iframe>
-
-      <div class="bottom">
-        <p class="time" id="time" data-bind="text: formattedTime"><p>
-        <p class="weather" id="weather">
-          <span class="temp"><span data-bind="text: temp">N/A</span><span class="deg" data-bind="ifnot: unavailable">°</span></span> <span class="forcast" data-bind="text: forcast">N/A</span>
+    <div class="frame-container">
+        <iframe class="frame" src="https://buildingos.com/reports/report/7c4cb426011811e7b070525400ac4414" allowtransparency="true" scrolling="no" frameBorder=0 width="740" height="361"></iframe>
+        <iframe class="frame" src="https://buildingos.com/reports/report/927286f4011811e7b070525400ac4414" allowtransparency="true" scrolling="no" frameBorder=0 width="740" height="361"></iframe>
+        <iframe class="frame" src="https://buildingos.com/reports/report/a8fec8c4011811e79cc85254009e602c" allowtransparency="true" scrolling="no" frameBorder=0 width="740" height="361"></iframe>
+        <iframe class="frame" src="https://buildingos.com/reports/report/9c75a0e6011d11e7a253525400391da3" allowtransparency="true" scrolling="no" frameBorder=0 width="740" height="361"></iframe>
+    </div>
+    <div class="bottom">
+        <p class="time" id="time" data-bind="text: formattedTime">
+            <p>
+                <p class="weather" id="weather">
+                    <span class="temp"><span data-bind="text: temp">N/A</span><span class="deg" data-bind="ifnot: unavailable">°</span></span> <span class="forcast" data-bind="text: forcast">N/A</span>
+                </p>
+            </p>
         </p>
-      </div>
-      <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js" integrity="sha384-tvhEVHsrzai+guUF4cd0SVl6+tXsWu2ioLB3VR9mjkFuw3fevJVq6aJtxqTLhIv6" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js" integrity="sha384-ohw6o2vy/chIavW0iVsUoWaIPmAnF9VKjEMSusADB79PrE3CdeJhvR84BjcynjVl" crossorigin="anonymous"></script>
-      <script src="js/WeatherViewModel.js"></script>
-      <script src="js/TimeViewModel.js"></script>
-      <script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js" integrity="sha384-tvhEVHsrzai+guUF4cd0SVl6+tXsWu2ioLB3VR9mjkFuw3fevJVq6aJtxqTLhIv6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js" integrity="sha384-ohw6o2vy/chIavW0iVsUoWaIPmAnF9VKjEMSusADB79PrE3CdeJhvR84BjcynjVl" crossorigin="anonymous"></script>
+    <script src="js/WeatherViewModel.js"></script>
+    <script src="js/TimeViewModel.js"></script>
+    <script>
         ko.applyBindings(new WeatherViewModel(), document.getElementById('weather'));
         ko.applyBindings(new TimeViewModel(), document.getElementById('time'));
-      </script>
-      <script>
-          window.setTimeout(function() {
-              location.reload();
-          }, 3600000); // 1 hour
-      </script>
-    </body>
+    </script>
+    <script>
+        window.setTimeout(function() {
+            location.reload();
+        }, 3600000); // 1 hour
+    </script>
+</body>
+
 </html>
