@@ -19,13 +19,15 @@
         <iframe class="frame" src="https://buildingos.com/reports/report/9c75a0e6011d11e7a253525400391da3" allowtransparency="true" scrolling="no" frameBorder=0 width="740" height="361"></iframe>
     </div>
     <div class="bottom">
-        <p class="time" id="time" data-bind="text: formattedTime">
-            <p>
-                <p class="weather" id="weather">
-                    <span class="temp"><span data-bind="text: temp">N/A</span><span class="deg" data-bind="ifnot: unavailable">°</span></span> <span class="forcast" data-bind="text: forcast">N/A</span>
-                </p>
+        <div class="time" id="time">
+            <p data-bind="text: formattedTime"></p>
+        </div>
+        <div class="weather" id="weather">
+            <p class="temp">
+                <span data-bind="text: temp">N/A</span><span class="deg" data-bind="ifnot: unavailable">°</span>
             </p>
-        </p>
+            <p class="forcast" data-bind="text: forcast">N/A</p>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js" integrity="sha384-tvhEVHsrzai+guUF4cd0SVl6+tXsWu2ioLB3VR9mjkFuw3fevJVq6aJtxqTLhIv6" crossorigin="anonymous"></script>
