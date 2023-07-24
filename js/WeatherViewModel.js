@@ -11,7 +11,7 @@ var WeatherViewModel = (function () {
 
 		self.fetch = function () {
 			$.ajax({
-				url: 'https://mtdweb.mtd.org/api/weather/current',
+				url: 'https://api.pirateweather.net/forecast/QGeQWdlChULeGtPZ/40.11540485198756,-88.19528513297648?exclude=minutely,hourly,daily,alerts',
 				dataType: 'JSON',
 				contentType: 'text/plain',
 				xhrFields: {
@@ -19,8 +19,8 @@ var WeatherViewModel = (function () {
 				}
 			}).then(function (data) {
 				console.log('weather', data);
-				self.temp(data.Temperature);
-				self.forecast(data.Conditions.toLowerCase());
+				self.temp(Math.floor(data.currently.temperature));
+				self.forecast(data.currently.summary.toLowerCase());
 				if (self.unavailable()) {
 					window.setTimeout(self.fetch, 15000);
 				}
